@@ -49,7 +49,7 @@ let countries = [
 // Create a function which prints the names of the countries and their biggest cities given in an array
 function printCountryNameAndLargestCity(countries) {
     for(let i = 0; i < countries.length; i++){
-       console.log(countries[i].name); 
+       console.log(countries[i].name + " - " + countries[i].largestCity.name); 
     }
 }
 printCountryNameAndLargestCity(countries);

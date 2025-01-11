@@ -17,7 +17,7 @@ const france = {
     neighbours: ['Belgium', 'Germany', 'Italy', 'Luxembourg', 'Monaco', 'Spain', 'Switzerland'],
     countryCode: 'FR'
 };
-
+/*
 // Exercise 2
 function populationPrinter(country) {
     console.log('The population of ' + country.name + ' is ' + country.population);
@@ -31,7 +31,7 @@ populationPrinter(france);
 // array of countries
 const someArray = [50, 2, 4, 5, 7];
 const anotherArray = ['Max', 'Jane', 'Theo'];
-
+*/
 const arrayOfCountries = [
     belgium, 
     france,
@@ -44,22 +44,32 @@ const arrayOfCountries = [
         neighbours: ['Norway', 'Sweden', 'Russia'],
         countryCode: 'FI'
     }
-];
+]; 
 
-console.log(arrayOfCountries);
+//console.log(arrayOfCountries);
 
 function getMaximumPopulation(countryArray) {
     let countryWithBiggestPopulation = countryArray[0];
     for(let i = 0; i < countryArray.length; i++) {
-        console.log(countryArray[i].population);
+        //console.log(countryArray[i].population);
         if(countryWithBiggestPopulation.population < countryArray[i].population){
             countryWithBiggestPopulation = countryArray[i];
         }
     }
-    return countryWithBiggestPopulation;
+    console.log(countryWithBiggestPopulation.name);
+    console.log (countryWithBiggestPopulation.population);
 }
 
-console.log(getMaximumPopulation(arrayOfCountries));
+getMaximumPopulation(arrayOfCountries); 
+
+function sumOfPopulation(x){
+    let sum=0;
+    for(i=0;i<arrayOfCountries.length; i++){
+        sum=sum+arrayOfCountries[i].population;
+    }
+    console.log("The total population is "+ sum);
+}
+sumOfPopulation(arrayOfCountries);
 
 
 // Exercise 4
@@ -74,7 +84,7 @@ function getSumOfPopulations(countryArray) {
 
 console.log('Sum of populations: ' + getSumOfPopulations(arrayOfCountries));
 
-
+/*
 // Exericse 5
 // Desired output ['BE', 'FR', 'FI']
 function getCountryCodes(countryArray) {
@@ -91,3 +101,4 @@ function getCountryCodes(countryArray) {
 
 console.log(getCountryCodes(arrayOfCountries));
 
+*/
