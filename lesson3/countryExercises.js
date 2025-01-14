@@ -84,6 +84,15 @@ function getSumOfPopulations(countryArray) {
 
 console.log('Sum of populations: ' + getSumOfPopulations(arrayOfCountries));
 
+function countryCode(x){
+    let countryCodeArray=[];
+    for(i=0; i<arrayOfCountries.length; i++){
+        countryCodeArray.push(arrayOfCountries[i].countryCode);
+        
+    }
+    return countryCodeArray;
+}
+console.log(countryCode(arrayOfCountries));
 /*
 // Exericse 5
 // Desired output ['BE', 'FR', 'FI']
